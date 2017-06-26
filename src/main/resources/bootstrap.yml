@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Hello MicroService
+    
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value} 
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 3
+  client:
+    
+    serviceUrl:
+      defaultZone: http://eureka-server-common.appspot.com//eureka
+    
+server:
+  port: 0
