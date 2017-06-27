@@ -15,7 +15,7 @@ public class Hello {
 	@RequestMapping(value="/")
 	@ResponseBody
 	public String sayHello(){
-		return "Welcome to Spring Boot with Goocle Cloud Platform .";
+		return "Welcome to Spring Boot with Goocle Cloud Platform . having git hub";
 	}
 	
 	public static void main(String [] args){
