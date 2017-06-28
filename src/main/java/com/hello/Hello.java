@@ -26,11 +26,10 @@ public class Hello {
 
 	@RequestMapping(value = "/input", method = RequestMethod.POST)
 	@ResponseBody
-	public String input(@RequestBody String input) {
-		String fileData = restTemplate.getForObject("https://storage.googleapis.com/user-test-data-1/Hello.txt",
-				String.class);
+	public String input(@RequestBody String url) {
+		String fileData = restTemplate.getForObject(url,String.class);
 
-		if (fileData.equals(input)) {
+		if (fileData.equalsIgnoreCase("Hello")) {
 			return "True";
 		} else {
 			return "False";
